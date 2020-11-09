@@ -22,12 +22,13 @@ public class Program {
 			
 		}catch(FileNotFoundException e){
 			System.out.println("Arquivo nao encontrado");
+			e.printStackTrace();//sequencias de chamadas que gerou a excecao
 		}
 		finally {
 			if(sc!=null) {
 				sc.close();
 				System.out.println("Finally executado");
-				e.printStackTrace();//sequencias de chamadas que gerou a excecao
+				
 				
 			}
 		}
